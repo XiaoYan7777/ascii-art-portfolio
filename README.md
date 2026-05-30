@@ -1,0 +1,241 @@
+本项目是一个基于 Next.js + TailwindCSS 的 ASCII Art 风格个人作品集网站，展示盐（Salt）的技术学习、项目实践与成长。
+
+***
+
+## 📁 根目录文件
+
+### package.json
+
+- **用途**：项目依赖与脚本配置
+- **内容**：
+  - 项目名称：my-v0-project
+  - 脚本命令：`npm run dev`（启动开发服务器）、`npm run build`（构建）、`npm run start`（启动生产服务器）
+  - 核心依赖：Next.js 16.0.0、React 19.2.0、TailwindCSS、Radix UI 组件库等
+
+### tsconfig.json
+
+- **用途**：TypeScript 编译配置
+- **内容**：定义了 TypeScript 编译选项、路径别名等
+
+### next.config.mjs
+
+- **用途**：Next.js 配置文件
+- **内容**：包含 Next.js 的自定义配置选项
+
+### postcss.config.mjs
+
+- **用途**：PostCSS 配置文件
+- **内容**：配置 TailwindCSS 与 autoprefixer 等插件
+
+### components.json
+
+- **用途**：shadcn/ui 组件库配置
+- **内容**：定义了组件的样式基础、别名路径等
+
+### .gitignore
+
+- **用途**：Git 版本控制忽略规则
+- **内容**：指定哪些文件或目录不纳入版本控制（如 node\_modules、.next 等）
+
+### pnpm-lock.yaml
+
+- **用途**：pnpm 包管理器锁文件
+- **内容**：记录依赖的精确版本，确保安装一致性
+
+***
+
+## 📁 /app 目录（Next.js App Router）
+
+### app/layout.tsx
+
+- **用途**：网站根布局组件
+- **内容**：
+  - 配置页面元数据（标题、描述、图标）
+  - 引入 JetBrains Mono 等宽字体
+  - 设置语言为 zh-CN
+  - 包含 Vercel Analytics 统计组件
+
+### app/page.tsx
+
+- **用途**：网站主页（入口页面）
+- **内容**：
+  - 客户端组件，加载 resumeData.json 数据
+  - 按顺序渲染所有板块：Hero → About → Experience → Projects → Skills → Education → Contact → Footer
+  - 数据加载时显示 "加载中..." ASCII 艺术提示
+
+### app/globals.css
+
+- **用途**：全局样式文件
+- **内容**：
+  - TailwindCSS 配置导入
+  - 亮色/暗色主题 CSS 变量定义（背景、前景、卡片、强调色等）
+  - 字体配置：JetBrains Mono、SimHei（黑体）、Microsoft YaHei（微软雅黑）
+  - CRT 风格扫描线效果（scanline effect）
+  - 暗角效果（vignette）
+  - 网格背景特效
+
+***
+
+## 📁 /components 目录（页面组件）
+
+### components/hero.tsx
+
+- **用途**：首页顶部英雄区域
+- **内容**：
+  - ASCII 艺术字 "SALT"
+  - 显示姓名（盐 (Salt)）
+  - 显示职业/身份（AI 应用开发者 & 后端工程师）
+  - 四角 ASCII 装饰边框
+
+### components/about.tsx
+
+- **用途**：关于我板块
+- **内容**：
+  - 标题：║ 关于我 ║
+  - 显示个人简介（bio）
+  - 显示邮箱、电话
+  - 显示社交链接（GitHub 等）
+
+### components/experience.tsx
+
+- **用途**：工作经验/经历板块
+- **内容**：
+  - 标题：║ 工作经验 ║
+  - 列表显示工作经历（算法竞赛、AI 应用开发、后端开发）
+  - 每条经历包含：公司/领域、职位/身份、时间
+
+### components/projects.tsx
+
+- **用途**：项目作品板块
+- **内容**：
+  - 标题：║ 项目作品 ║
+  - 网格布局展示项目卡片（2列）
+  - 每个项目包含：标题、描述、查看项目链接
+
+### components/skills.tsx
+
+- **用途**：技能专长板块
+- **内容**：
+  - 标题：║ 技能专长 ║
+  - 网格布局展示技能列表
+  - 每项技能显示名称
+
+### components/education.tsx
+
+- **用途**：教育背景板块
+- **内容**：
+  - 标题：║ 教育背景 ║
+  - 每条教育经历包含：院校、学位、毕业时间
+  - ASCII 风格边框装饰
+
+### components/contact.tsx
+
+- **用途**：联系方式板块
+- **内容**：
+  - 标题：║ 联系方式 ║
+  - 显示联系留言（contactmessage）
+  - 显示邮箱（可点击发邮件）
+  - 显示所在城市
+
+### components/footer.tsx
+
+- **用途**：网站底部版权信息
+- **内容**：
+  - ASCII 艺术字：用爱打造 by 盐
+  - 版权声明：© 2026 • 使用 Next.js & TailwindCSS 构建
+
+### components/theme-provider.tsx
+
+- **用途**：主题切换提供者组件
+- **内容**：提供亮色/暗色主题切换功能
+
+### components/ui/\*（UI 组件库）
+
+- **用途**：shadcn/ui 组件集合
+- **内容**：包含 50+ 个可复用 UI 组件，如：
+  - button.tsx、input.tsx、card.tsx
+  - dialog.tsx、sheet.tsx、tooltip.tsx
+  - form.tsx、select.tsx、tabs.tsx
+  - 等（完整列表见项目目录）
+
+***
+
+## 📁 /public 目录（静态资源）
+
+### public/resumeData.json
+
+- **用途**：核心数据文件，存储所有网站展示内容
+- **内容结构**：
+  - **main**：基本信息（姓名、职业、简介、联系方式、社交链接）
+  - **resume**：
+    - education：教育经历
+    - work：工作/项目经历
+    - skills：技能列表及掌握程度
+  - **portfolio**：项目作品列表（标题、描述、图片、链接）
+  - **testimonials**：评价/推荐语（当前为空）
+
+### public/ 其他文件
+
+- **图片资源**：placeholder.svg、byte.png、akshaya.png、devdump.png、furnace.png、leegit.png 等项目封面图
+- **图标资源**：icon.svg、icon-light-32x32.png、icon-dark-32x32.png、apple-icon.png 网站图标
+- **其他**：placeholder-logo.svg、placeholder-user.jpg 等占位图
+
+***
+
+## 📁 /hooks 目录（自定义 Hooks）
+
+### hooks/use-mobile.ts
+
+- **用途**：检测设备是否为移动端的自定义 Hook
+- **内容**：返回一个布尔值，表示当前设备是否为移动设备
+
+### hooks/use-toast.ts
+
+- **用途**：Toast 提示消息的自定义 Hook
+- **内容**：提供显示、隐藏 Toast 消息的函数和状态
+
+***
+
+## 📁 /lib 目录（工具函数）
+
+### lib/utils.ts
+
+- **用途**：通用工具函数
+- **内容**：包含 clsx + tailwind-merge 合并工具函数，用于动态类名合并
+
+***
+
+## 📁 /styles 目录（样式）
+
+### styles/globals.css
+
+- **用途**：额外全局样式
+- **内容**：可能包含补充的样式定义
+
+***
+
+## 🎨 技术栈总结
+
+| 类别    | 技术                           |
+| ----- | ---------------------------- |
+| 框架    | Next.js 16.0.0               |
+| 语言    | TypeScript 5.x、React 19.2.0  |
+| 样式    | TailwindCSS 4.1.9            |
+| 字体    | JetBrains Mono（等宽字体）+ 中文字体支持 |
+| UI 组件 | Radix UI + shadcn/ui         |
+| 动画    | tw-animate-css               |
+| 表单    | react-hook-form + zod 验证     |
+| 部署    | Vercel Analytics 集成          |
+
+***
+
+## 📝 数据更新说明
+
+如需修改网站内容，主要编辑以下文件：
+
+1. **public/resumeData.json** — 修改所有文字内容（个人介绍、技能、项目、教育、经历等）
+2. **components/hero.tsx** — 修改 ASCII 艺术字或首页布局
+3. **app/layout.tsx** — 修改页面标题、描述、SEO 元数据
+4. **components/footer.tsx** — 修改底部版权信息
+5. **app/globals.css** — 修改主题颜色、字体、背景特效
+

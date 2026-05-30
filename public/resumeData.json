@@ -1,0 +1,126 @@
+{
+  "main": {
+    "name": "盐 (Salt)",
+    "occupation": "AI 应用开发热爱者 & 后端开发者",
+    "description": "",
+    "image": "profilepic.jpg",
+    "bio": "你好，我是盐（Salt）。一名计算机专业大二学生，专注于 AI 应用开发与后端技术方向。熟悉 Python、LangChain、LangGraph、RAG、FastAPI 等技术栈，正在深入学习 Agent 与大模型应用开发。曾获得多项算法竞赛省级奖项，具备良好的数据结构与算法基础。同时了解 Java、SSM、Spring Boot 等后端开发技术。这里记录我的技术学习、项目实践与成长思考。",
+    "contactmessage": "欢迎交流技术，一起探索 AI 的无限可能！",
+    "email": "1403485052@qq.com",
+    "phone": "为保护隐私，请联系作者获取",
+    "address": {
+      "street": "",
+      "city": "广州",
+      "state": "中国",
+      "zip": ""
+    },
+    "website": "",
+    "resumedownload": "",
+    "social": [
+      {
+        "name": "盐的github",
+        "url": "https://github.com/XiaoYan7777",
+        "className": "fa fa-github"
+      },
+      {
+        "name": "盐的企鹅",
+        "url": "1403485052",
+        "className": "fa fa-qq"
+      }
+    ],
+    "profiles": []
+  },
+  "resume": {
+    "skillmessage": "我的技术武器库",
+    "education": [
+      {
+        "school": "计算机科学与技术专业",
+        "degree": "本科在读（大二）",
+        "graduated": "2028年（预计）",
+        "description": "专注于 AI 应用开发与后端技术方向，持续学习与实践中"
+      }
+    ],
+    "work": [
+      {
+        "company": "算法竞赛",
+        "title": "多项省级奖项获得者",
+        "years": "2024 - 至今"
+      },
+      {
+        "company": "AI 应用开发",
+        "title": "独立开发者 & 学习者",
+        "years": "2024 - 至今"
+      },
+      {
+        "company": "后端开发",
+        "title": "Java / Python 后端实践者",
+        "years": "2024 - 至今"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Python",
+        "level": "90%"
+      },
+      {
+        "name": "LangChain & LangGraph",
+        "level": "85%"
+      },
+      {
+        "name": "RAG 检索增强生成",
+        "level": "80%"
+      },
+      {
+        "name": "FastAPI",
+        "level": "85%"
+      },
+      {
+        "name": "Agent & 大模型应用",
+        "level": "78%"
+      },
+      {
+        "name": "数据结构与算法",
+        "level": "88%"
+      },
+      {
+        "name": "Java & Spring Boot",
+        "level": "72%"
+      },
+      {
+        "name": "SSM 框架",
+        "level": "70%"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "项目占坑中",
+        "about": "争取九月份前完成",
+        "image": "/byte.png",
+        "url": "#"
+      },
+      {
+        "title": "项目占坑中",
+        "about": "正在开发中ing",
+        "image": "/akshaya.png",
+        "url": "#"
+      },
+      {
+        "title": "项目占坑中",
+        "about": "正在开发中ing",
+        "image": "/devdump.png",
+        "url": "#"
+      },
+      {
+        "title": "项目占坑中",
+        "about": "正在开发中ing",
+        "image": "/furnace.png",
+        "url": "#"
+      }
+    ]
+  },
+  "testimonials": {
+    "testimonials": []
+  }
+}
